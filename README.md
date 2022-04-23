@@ -1,6 +1,39 @@
 # Design Patterns Tutorial in Java 
 [Tutorials Point -Design Patterns ](https://www.tutorialspoint.com/design_pattern/index.htm)  
 
+### Compiling Java Souce Code with Packages 
+1. Create a folder `MyApp` and your source file `HelloApp.java` inside the folder. 
+2. Declare the package name at the top of your souce file.   
+```
+package MyApp
+
+class HelloApp
+{
+    public static void main(String[] args)
+    {
+         System.out.println("Hellow World");
+    } 
+}
+```
+3. You can have other classes inside the same `MyApp` folder with the same `package` declaration. You can also have sub directories and sub packages e.g `MyApp.MyService` as a sub package name.   
+4. Compile the sources 
+```
+> javac -d bin MyApp/Hello.java
+```  
+Here `Hello.java`is the class having the main method  
+
+5. In the case of our first design pattern we can compile and run the source as follows: 
+First compile the sources 
+```
+> javac -d bin .\CreationalPatterns\FactoryPattern\FactoryPattern.java 
+```
+This will generate class files in bin/CreationalPatterns/FactoryPattern directory
+Next run the main class file with the `java` interpreter.  
+```
+> cd bin 
+> java CreationalPatterns.FactoryPattern.FactoryPattern
+```
+
 ### Introduction 
 Design patterns are solutions to general problems that software developers face in software development.  
 These solutios were obtained by trial and error by numerioud software developers over quite a substantial period of time.  
@@ -23,3 +56,4 @@ There are 23 desing patterns which canbe classified in three categories:
 
 ### Creational Patterns 
 1. Factory pattern 
+2. Abstract Factory pattern 
