@@ -1,9 +1,7 @@
 package CreationalPatterns.FactoryPattern;
 
-public class Rectangle implements Shape 
-{
-    public void draw()
-    {
+public class Rectangle implements Shape {
+    public void draw() {
         System.out.println("Rectangle drawn");
     }
 }
