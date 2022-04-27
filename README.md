@@ -55,5 +55,41 @@ There are 23 desing patterns which canbe classified in three categories:
 
 
 ### Creational Patterns 
-1. Factory pattern 
-2. Abstract Factory pattern 
+1. Factory Pattern 
+2. Abstract Factory Pattern 
+3. Singleton Pattern
+4. Builders Pattern 
+5. Prototype Pattern
+
+__Factory Pattern__  
+Factory pattern provides one of the best ways to create an object. We create object without exposing the creation logic to the client and refer to newly createed object using a common interface.  
+
+__Abstract Factory Pattern__    
+Abstract factory pattern uses a super-factory also known as factory of factories.   
+The super factory creates factories having a common base abstract class.   
+The factories created are then used to create objects with common interface just as in the _factory pattern_.  
+
+__Singleton Pattern__  
+The singleton pattern involves a single class which is responsible to create an object while making sure that only a single object of the class gets created.  
+
+__Builders Pattern__  
+Builder patterns builds a complex object using simple objects and using a step by step approach.  
+The bulder is independent of other objects.  
+
+__Prototype Pattern__  
+In prototype pattern a clone of the desired object is created, when the object is needed, to maximax performance.   
+This pattern is used when creation of the an object is costly. For example and object is to be created after a costly database operation. We can cache the object and return its clone on the next request and update the database as and when needed thus reducing database calls.  
+
+
+### Structural Patterns 
+1. Adapter Pattern 
+2. Bridge Pattern 
+
+__Adapter Pattern__  
+Adapter pattern works as a bride between two incompatible interfaces.   
+It onvolces a single class which is responsible to joinfunctionalities of independent or incompatible interfaces.   
+
+__Bridge Pattern__  
+Bridge is used when we need to decouple an abstraction from its imlementation so that the two can vary independently.  
+It does this by providing a bridge strcuture between them.    
+This pattern involces an interface which acts as a birdge which make the functionality of concrete classes independent from interface implementer class. Both types of classes can be altered structurally without affecting each other.      
