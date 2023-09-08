@@ -47,7 +47,9 @@ __Creational__
 * Factory Method
 * Prototype
 * Simple Singleton
-* Simple Factory
+* Simple Factory  
+
+All the creational patterns focus on producing products.
 
 __Structural__
 * Adapter
@@ -88,8 +90,8 @@ Don’t take the single responsibility principle too far. The less change a clas
 It states that classes should be open for extension but closed for modification.  
 3. __Liskov Substitution Principle__   
 Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.  
-You should not return different a type from the override method of sub classes than the parent class.
-This is not an issue in strongly typed languages like Java or C#.   
+You should not return a different type from the override method of sub classes than the parent class.
+This is not an issue in strongly typed languages like Java or C#.    
 4. __Interface Segregation Principle__  
 Keeping your interfaces small follows the interface segregation principle: many client-specific interfaces are better than one general purpose interface.  
 5. __Dependency Inversion Principle__  
@@ -114,3 +116,34 @@ Abstract Factory patterns work around a super-factory which creates other factor
 [GeeksForgeek: Abstract Factory Pattern](https://www.geeksforgeeks.org/abstract-factory-pattern/)
 
 ## Chapter 4: Builder
+To checkout the abstract factory branch on the sample code
+```
+$ git checkout builder
+```
+and look in the `src` directory.
+
+__Definition__  
+The Builder pattern separates the construction of a complex object from its representation so that the same construction process can create different representations.  
+
+__Description__  
+In the Builder pattern, the building process is delegated to a _Director_ that instructs the _Bulder_ on steps to be taken to build the product. There may be two or more _Builders_ each of which may build the the product using different material in every step of the building process.  
+
+__Implementation__  
+We build a house to demonstrate the Builder pattern. Our director is represented by the _Architect_. We also have two Carpenters, _NoviceCarpenter_ and _ExpertCarpenter_ both of which implements the _CarpenterInterface_.  
+In the _CarpenterInterface_ the steps required to build the house is represented by methods in the interface.  
+
+## Chapter 5: The Factory Methods
+To checkout the factory method branch on sample code
+```
+$ git checkout factory_method
+```
+
+__Definition__   
+The factory method defines an interface for creating an object but defers the creation of the object to a subclass.  
+
+__Description__  
+Factories are used to replace the _product_ calls constructor so that no logic exists in the _product_ class constructor.  
+
+__Implementation__  
+Here we have a Factory which is represented by the _TomatoGarden_. The _TomotaGarden_ factory class extends the _Garden_ abstract class which contains the _harvest()_ abstract method that generate the product an object of the _TomatoPlant_.  
+Similarly, we can have another Factory class such as the _OnionGarden_.    
